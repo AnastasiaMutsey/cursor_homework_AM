@@ -30,19 +30,20 @@ const pairedNumber = Math.floor(totalSummInteger) % 2;
 console.log(totalSummInteger == 0);
 
 // Виведіть суму решти, при оплаті всіх товарів (без округлення), якщо клієнт платить 500 грн.
-console.log(`Rest - ${500 - totalSummOfDishes}`);
+const customerPay = 500;
+console.log(`Rest - ${customerPay - totalSummOfDishes}`);
 
 // Виведіть середнє значення цін, округлене до другого знаку після коми
-const meanPrice = ((totalSummOfDishes/3).toFixed(2));
+const meanPrice = Number((totalSummOfDishes/3).toFixed(2));
 console.log(`Mean Price ${meanPrice}`);
 
 // (Більш складне) Створіть змінну, в якої збережіть випадкову знижку (використовуйте функцію Math.random).
 // Зробіть клієнту випадкову знижку та виведіть суму до оплати округлену до 2 знаків після коми.
 // Виведіть чистий прибуток, якщо клієнт заплатив зі знижкою та собівартість товарів рівно в два рази нижче їх ціни?
 const randomDiscount = Math.trunc(Math.random() * 100);
-const summDiscont = (totalSummOfDishes * (randomDiscount / 100)).toFixed(2);
-const summToPay = (totalSummOfDishes - summDiscont).toFixed(2)
-const netProfit = ((totalSummOfDishes/2) - summDiscont).toFixed(2)
+const summDiscont = Number(totalSummOfDishes * (randomDiscount / 100)).toFixed(2);
+const summToPay = Number(totalSummOfDishes - summDiscont).toFixed(2)
+const netProfit = Number((totalSummOfDishes/2) - summDiscont).toFixed(2)
 console.log(`Net profit ${netProfit}`)
 
 // Advanced
@@ -54,6 +55,6 @@ document.writeln(`
 4. Сума всіх товарів без копійок:  ${totalSummInteger}; <br>
 5. Сума товарів округлена до сотен:  ${roundedSummDishes}; <br> 
 6. Чи є сума парним числом?  ${totalSummInteger == 0}; <br>
-7. Решта с 500:  ${500 - totalSummOfDishes}; <br>
+7. Решта с 500:  ${customerPay - totalSummOfDishes}; <br>
 8. Середнє значення цін: ${meanPrice}; <br>
 9. Чистий прибуток: ${netProfit} `)
