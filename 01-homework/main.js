@@ -9,7 +9,7 @@ const maxPrice = Math.max(spritePrice, burgerPrice, salatPrice);
 console.log ("Max price - " + maxPrice);
 
 // Використовуючи вбудований об'єкт Math – виведіть мінімальне число
-minPrice =  Math.min(spritePrice, burgerPrice, salatPrice);
+const minPrice =  Math.min(spritePrice, burgerPrice, salatPrice);
 console.log ("Min price - " + minPrice);
 
 // Складіть вартість всіх товарів, помістіть її в змінну та виведіть цю суму
@@ -34,7 +34,7 @@ const customerPay = 500;
 console.log(`Rest - ${customerPay - totalSummOfDishes}`);
 
 // Виведіть середнє значення цін, округлене до другого знаку після коми
-const meanPrice = Number((totalSummOfDishes/3).toFixed(2));
+const meanPrice = Number((totalSummOfDishes / 3).toFixed(2));
 console.log(`Mean Price ${meanPrice}`);
 
 // (Більш складне) Створіть змінну, в якої збережіть випадкову знижку (використовуйте функцію Math.random).
@@ -43,7 +43,7 @@ console.log(`Mean Price ${meanPrice}`);
 const randomDiscount = Math.trunc(Math.random() * 100);
 const summDiscont = Number(totalSummOfDishes * (randomDiscount / 100)).toFixed(2);
 const summToPay = Number(totalSummOfDishes - summDiscont).toFixed(2)
-const netProfit = Number((totalSummOfDishes/2) - summDiscont).toFixed(2)
+const netProfit = Number((totalSummOfDishes / 2) - summDiscont).toFixed(2)
 console.log(`Net profit ${netProfit}`)
 
 // Advanced
