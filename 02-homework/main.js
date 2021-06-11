@@ -17,18 +17,18 @@ while (secondNumber === '' || isNaN(+secondNumber) || !Number.isInteger(+secondN
 // TRUE – потрібно, FALSE – не потрібно. Використовуйте функцію confirm
 let isEven = confirm("Do you need to skip even numbers?")
 
-let minNumber = Math.min(firstNumber, secondNumber);
-let maxNumber = Math.max(firstNumber, secondNumber);
-let summ = 0;
+const minNumber = Math.min(firstNumber, secondNumber);
+const maxNumber = Math.max(firstNumber, secondNumber);
+let sum = 0;
 
 // Напишіть цикл, який буде складати числа від раніше отриманих N и M
 // В циклі додайте перевірку – чи потрібно пропускати при складанні парні числа.
 // (Використовуйте для цього if/else). Якщо парні числа потрібно пропускати не додавайте їх до суми
 for(let i = minNumber; i <= maxNumber; i++){
-    if (isEven && i%2 == 0){
+    if (isEven && i % 2 === 0){
         continue;
     }
-else summ = summ + i;
+else sum += i;
 }
 // Виведіть результат
-alert(`Summ your number : ${summ}`);
+alert(`Sum your number : ${sum}`);
