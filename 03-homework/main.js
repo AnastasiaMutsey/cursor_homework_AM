@@ -13,10 +13,12 @@ while(number != 0){
 //Створити функцію, яка визначає ступінь числа. Не використовуючи Math.pow та **
 function getPow(number, pow){
  let result = number;
- for (let i = 1; i < pow; i ++){
-     result = number * result;
- }
- return result;
+ for (let i = 1; i < Math.abs(pow); i ++){
+     if(pow > 0){
+      result = number * result;   
+     } else {result = 1/(number*result)}
+    
+ } return result;
 }
 
 //Створити функцію, яка форматує ім'я, роблячи першу букву великою.
@@ -62,7 +64,7 @@ else return false;
 //Створіть функцію генерації випадкового паролю (тільки числа),
 // довжина встановлюється користувачем або по замовчуванню = 8 символам.
 function getRandomPassword(lenPassword = 8){
-    if(lenPassword > 10) lenPassword = 10;
+    if(lenPassword > 10) lenPassword = 8;
     lenPassword = lenPassword * (-1);
     return Math.random().toString().slice(lenPassword);
 }
