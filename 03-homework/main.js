@@ -12,13 +12,12 @@ while(number != 0){
 
 //Створити функцію, яка визначає ступінь числа. Не використовуючи Math.pow та **
 function getPow(number, pow){
- let result = number;
- for (let i = 1; i < Math.abs(pow); i ++){
-     if(pow > 0){
+ let result = 1;
+ for (let i = 1; i <= Math.abs(pow); i ++){
+     if(pow >= 0)
       result = number * result;   
-     } else {result = 1/(number*result)}
-    
- } return result;
+      else result = result * (1 / number);
+    } return result;
 }
 
 //Створити функцію, яка форматує ім'я, роблячи першу букву великою.
@@ -97,7 +96,7 @@ const arrayDeleteDuplicateLetter = sentenceInput.filter((function(event) {
 
 document.writeln(`
 Функція №1: ${getMaxDigit(1236)} <br>
-Функція №2: ${getPow(5, 3)} <br>
+Функція №2: ${getPow(5, -3)} <br>
 Функція №3: ${getUpperLetter("вЛАД")} <br>
 Функція №4: ${getNetSalary(1000)} <br>
 Функція №5: ${getRandomNumber(1, 10)} <br>
