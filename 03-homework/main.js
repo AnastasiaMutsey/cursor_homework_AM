@@ -1,13 +1,13 @@
 // Створити функцію getMaxDigit(number).
 //яка отримує будь-яке число та виводить найбільшу цифру в цьому числі. 
 function getMaxDigit(number){
-maxDigit = 0;
+let maxDigit = 0;
 while(number != 0){
     if((number % 10) > maxDigit)
     maxDigit = (number % 10);
     number = number / 10;
   }
-  return maxDigit.toString()[0];
+  return  Math.trunc(maxDigit);//maxDigit.toString()[0];
 }
 
 //Створити функцію, яка визначає ступінь числа. Не використовуючи Math.pow та **
@@ -21,7 +21,7 @@ function getPow(number, pow){
 }
 
 //Створити функцію, яка форматує ім'я, роблячи першу букву великою.
-let getUpperLetter = (nameHuman) => nameHuman[0].toUpperCase() + nameHuman.slice(1).toLocaleLowerCase(); 
+const getUpperLetter = (nameHuman) => nameHuman[0].toUpperCase() + nameHuman.slice(1).toLocaleLowerCase(); 
 
 //Створити функцію, яка вираховує суму, що залишається після оплати податку від зарабітньої плати.
 function getNetSalary(salary){
