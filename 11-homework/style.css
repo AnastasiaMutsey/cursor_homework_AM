@@ -1,12 +1,13 @@
 html {
-    background-image: url(img/img1.jpg);
+    background-image: url(img/img1.jfif);
     background-size: 100%;
 }
 
 button{
+    font-family: Comic Sans MS, Comic Sans, cursive;
     cursor: pointer;
-    background: #f78f8fd0;
-    color:cornsilk;
+    background: #a0a0a0d0;
+    color:rgb(255, 248, 220);
     width: 70px;
     padding: 10px;
     border: rgb(250, 250, 250) 2px solid;
@@ -17,24 +18,29 @@ button{
 }
 
 button:hover{
-    background: rgba(135, 185, 243, 0.3);
+    background: rgba(226, 235, 225, 0);
     transition: 0.3s;
+    justify-content: center;
+    color:#a0a0a0d0
   
 } 
 .number-characters{
+    margin-left: 10px;
     padding: 5px;  
     width: 50px;
+    justify-content: center;
 }
 .conteiner{
-    width: 50%; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
     margin: 0 auto; 
     text-align: center;
-
 }
 .label{
-    font-size: 130%;
-    font-weight: bold;
-    color: #f78f8fd0;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-size: 150%;
+    color: #706c6cd0;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
 }
