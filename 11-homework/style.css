@@ -44,3 +44,12 @@ button:hover{
     justify-content: center;
     align-items: center; 
 }
+
+.output{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 360%;
+    color: #696868;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 15px;
+}
